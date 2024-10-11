@@ -25,8 +25,7 @@ public class PlayerInputController : TopDownController
         Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
         newAim = (worldPos - (Vector2)transform.position).normalized;
 
-        if (newAim.magnitude >= .9f)
-        // Vector 값을 실수로 변환
+        if (newAim.magnitude >= .9f) // Vector 값을 실수로 변환
         {
             CallLookEvent(newAim);
         }

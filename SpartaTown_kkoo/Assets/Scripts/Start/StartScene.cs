@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartBtn : MonoBehaviour
+public class StartScene : MonoBehaviour
 {
     public InputField playerNameInput;
     public string playerName;
@@ -19,7 +19,7 @@ public class StartBtn : MonoBehaviour
             PlayerPrefs.SetString("PlayerName", playerName);
 
             // 게임 시작
-            SceneManager.LoadScene("MainScene"); //JOIN에 버튼을 만들어 
+            SceneManager.LoadScene("MainScene");
         }
         else
         {
