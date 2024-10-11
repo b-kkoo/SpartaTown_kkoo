@@ -4,6 +4,7 @@ public class TopDownMovement : MonoBehaviour
 {
     private TopDownController movementController;
     private Rigidbody2D movementRigidbody;
+    private GameObject playerName;
 
     private Vector2 movementDirection = Vector2.zero;
 
@@ -12,6 +13,8 @@ public class TopDownMovement : MonoBehaviour
         // 같은 게임오브젝트의 TopDownController, Rigidbody를 가져올 것 
         movementController = GetComponent<TopDownController>();
         movementRigidbody = GetComponent<Rigidbody2D>();
+
+        playerName = GameObject.Find("Canvas/PlayerName");
     }
 
     private void Start()
@@ -38,5 +41,7 @@ public class TopDownMovement : MonoBehaviour
         direction = direction * 5;
 
         movementRigidbody.velocity = direction;
+
+        playerName.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, 0));
     }
 }
