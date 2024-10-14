@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartBtn : MonoBehaviour
+public class StartScene : MonoBehaviour
 {
     public InputField playerNameInput;
     public string playerName;
